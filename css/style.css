@@ -1,0 +1,33 @@
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input {
+  margin-bottom: 5px;
+}
+
+.task__check:checked + .task__text {
+  color: green;
+  text-decoration: line-through;
+}
+
+.task__text {
+  margin-right: 10px;
+}
