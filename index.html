@@ -10,19 +10,25 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="body">
   <div class="container">
-    <h1 class="title">To Do List</h1>
-    <input class="input" type="text">
-    <button class="add-button">Add</button>
+    <div class="app-wrapper">
+      <h1 class="title">To Do List</h1>
+      <div class="input-box">
+        <input class="input" type="text">
+        <button class="add-button">Add</button>
+      </div>
 
-    <ul class="tasks">
-      <!-- <li class="task">
-        <input class="task__check" type="checkbox">
-        <p class="task__text">Lorem ipsum dolor sit amet.</p>
-        <button class="delete-button">Delete</button>
-      </li> -->
-    </ul>
+      <h2 class="tasks__title hidden">To do</h2>
+
+      <ul class="tasks">
+        <!-- <li class="task">
+          <input class="task__check" type="checkbox">
+          <p class="task__text">Lorem ipsum dolor sit amet.</p>
+          <button class="delete-button">Delete</button>
+        </li> -->
+      </ul>
+    </div>
   </div>
   <script src="js/main.js"></script>
 </body>
