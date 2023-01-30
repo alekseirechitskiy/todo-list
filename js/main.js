@@ -16,9 +16,17 @@ const clearInput = function () {
 
 const drawAnElement = function (task) {
 	const taskPost = `
-	  <li class="task" id="${task.id}">
-	  <p class="task__text">${task.task}</p>
-	  <button class="delete-button">Delete</button>
+  <li class="task" id="${task.id}">
+  <label class="task__checkbox">
+            <input class="task__check" type="checkbox">
+            <span class="task__text">${task.task}</span>
+          </label>
+
+	  <button class="delete-button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black" />
+            </svg>
+    </button>
 	  </li>
 	`;
 	workField.innerHTML += taskPost;
@@ -29,13 +37,18 @@ const toggleDone = function () {
 
 	for (let k = 0; k < taskText.length; k++) {
 		taskText[k].addEventListener("click", function () {
-			this.classList.toggle("done");
+			// this.classList.toggle("done");
 
-			const idIemp = this.closest(".task").id;
-			console.log(idIemp);
+			const elementId = this.closest(".task").id;
 
-			tasksList[idIemp - 1].done = !tasksList[idIemp - 1].done;
-			console.log(idIemp, tasksList[idIemp - 1].done);
+			console.log("elementId: ", elementId);
+
+			// console.log(elementId, tasksList[elementId - 1].done);
+			for (let i = 0; i < tasksList.length; i++) {
+				if (tasksList[i].id == elementId) {
+					tasksList[i].done = !tasksList[i].done;
+				}
+			}
 			console.log(tasksList);
 		});
 	}

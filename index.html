@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>start html</title>
+  <title>ToDo list</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,21 +16,13 @@
 <body class="body">
   <div class="container">
     <div class="app-wrapper">
-      <h1 class="title">To Do List</h1>
+      <h1 class="title">ToDo list</h1>
       <div class="input-box">
-        <input class="input" type="text">
-        <button class="add-button">Add</button>
+        <input class="input" type="text" placeholder="Add a new task">
+        <button class="add-button">+</button>
       </div>
-
       <h2 class="tasks__title hidden">To do</h2>
-
-      <ul class="tasks">
-        <!-- <li class="task">
-          <input class="task__check" type="checkbox">
-          <p class="task__text">Lorem ipsum dolor sit amet.</p>
-          <button class="delete-button">Delete</button>
-        </li> -->
-      </ul>
+      <ul class="tasks"></ul>
     </div>
   </div>
   <script src="js/main.js"></script>
